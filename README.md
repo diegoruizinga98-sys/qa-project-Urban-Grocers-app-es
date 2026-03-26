@@ -1,55 +1,93 @@
-# Proyecto Urban Grocers 
-📖 Descripción del Proyecto
-Urban Grocers es un proyecto de testing de API desarrollado durante el Sprint 4 del bootcamp de QA en TripleTen. El objetivo principal fue probar las nuevas funcionalidades del back-end de una aplicación de delivery de comestibles, enfocándose en la gestión de kits de productos y servicios de entrega.
+# 🛒 Urban Grocers — API Testing & Automation
 
-🎯 Objetivos del Proyecto
-Analizar requisitos de nuevas funcionalidades del back-end
-Diseñar casos de prueba para endpoints específicos de API
-Ejecutar pruebas de API utilizando Postman
-Documentar defectos encontrados en JIRA
-Validar respuestas y códigos de estado HTTP
-🔧 Funcionalidades Probadas
-### 1. Gestión de Kits de Productos
-- Endpoint: POST /api/v1/kits/{id}/products
-- Funcionalidad: Agregar comestibles a un kit existente
-- Validaciones principales:
-  - Límite máximo de 30 productos por kit
-  - Respuesta 400 Bad Request cuando se excede el límite
-  - Estructura correcta del JSON de respuesta
+**QA Automation Engineer:** Diego Ruiz Inga  
+**Sprints:** 2, 4 y 8 · TripleTen QA Bootcamp  
+**Stack:** Python 3.11 · Pytest · Requests · Postman · API REST · Parametrized Testing
 
-### 2. Servicios de Entrega "Order and Go"
-- Endpoint: POST /order-and-go/v1/delivery
-- Funcionalidad: Verificar disponibilidad y calcular costo de entrega
-- Validaciones principales:
-  - Disponibilidad del servicio por ubicación
-  - Cálculo correcto de precios de entrega
-  - Manejo de errores para ubicaciones no válidas
+---
 
-🛠️ Herramientas Utilizadas
-Herramienta	Propósito
-Postman	Ejecución de pruebas de API y validación de endpoints
-JIRA	Gestión y reporte de defectos encontrados
-ApiDoc	Consulta de documentación técnica de la API
-Google Sheets	Documentación de casos de prueba y resultados
-JSON	Formato de datos para requests y responses
-📊 Metodología de Testing
-### Técnicas Aplicadas:
-- Análisis de clases de equivalencia para parámetros de entrada
-- Testing de valores límite (especialmente para el límite de 30 productos)
-- Pruebas positivas y negativas para cada endpoint
-- Validación de códigos de estado HTTP (200, 400, 404, etc.)
-- Verificación de estructura JSON en respuestas
+## 📋 Descripción del proyecto
 
-### Tipos de Pruebas Realizadas:
-- ✅ Pruebas funcionales de endpoints
-- ✅ Pruebas de validación de parámetros
-- ✅ Pruebas de límites y restricciones
-- ✅ Pruebas de manejo de errores
-- ✅ Pruebas de formato de respuestas
+Suite de pruebas para la API REST de **Urban Grocers**, cubriendo validación manual con Postman (Sprints 2 y 4) y automatización con Python/Pytest (Sprint 8).
 
-📋 Casos de Prueba Principales
-### Kit de Productos:
-1. Agregar productos válidos a un kit existente
-2. Exceder el límite de 30 productos y validar error 400
-3. Agregar productos a kit inexistente y validar error 404
-4. Enviar formato JSON inválido y validar manejo de
+El Sprint 8 automatizó la validación del campo name en el endpoint de creación de kits, generando un conjunto parametrizado de 9 casos que cubre fronteras, valores inválidos y casos positivos.
+
+**Resultado clave:** ⬇️ **90%+ de reducción en tiempo de ejecución** de pruebas de API vs. ejecución manual
+
+---
+
+## 🧪 Cobertura de pruebas
+
+### Sprint 2 & 4 — Validación manual con Postman
+
+| Métrica | Valor |
+|---|---|
+| Total de solicitudes API probadas | 50 |
+| Tasa de aprobación antes del go-live | **100%** |
+| Casos de prueba funcionales | 71 |
+| Casos aprobados | 46 |
+| Casos fallidos (defectos detectados) | 25 |
+| Tasa de defectos | **35%** |
+
+### Sprint 8 — Automatización Python/Pytest
+
+| Métrica | Valor |
+|---|---|
+| Casos automatizados | 9 (parametrizados) |
+| Campo validado | name (creación de kits) |
+| Tipos de prueba | Fronteras, valores inválidos, positivos |
+| Reducción de tiempo de ejecución | **+90%** vs. manual |
+
+---
+
+## 🏗️ Estructura del proyecto
+
+| Archivo | Responsabilidad |
+|---|---|
+| create_kit_name_kit_test.py | Suite parametrizada de pruebas del campo name |
+| configuration.py | URL base y endpoints de la API |
+| data.py | Datos de prueba por caso |
+| sender_stand_methods.py | Métodos auxiliares para llamadas HTTP |
+
+---
+
+## ✅ Casos de prueba automatizados (campo name)
+
+| # | Caso | Tipo | Resultado esperado |
+|---|------|------|-------------------|
+| 1 | 1 carácter | Frontera inferior | ✅ Aprobado |
+| 2 | 511 caracteres | Frontera superior | ✅ Aprobado |
+| 3 | 512 caracteres | Fuera de frontera | ❌ Rechazado |
+| 4 | String vacío | Inválido | ❌ Rechazado |
+| 5 | Solo espacios | Inválido | ❌ Rechazado |
+| 6 | Caracteres especiales | Válido | ✅ Aprobado |
+| 7 | Números en string | Válido | ✅ Aprobado |
+| 8 | Campo ausente | Inválido | ❌ Rechazado |
+| 9 | Tipo incorrecto (int) | Inválido | ❌ Rechazado |
+
+---
+
+## 💻 Tecnologías utilizadas
+
+| Herramienta | Uso |
+|---|---|
+| **Python 3.11** | Lenguaje principal |
+| **Pytest** | Framework + parametrización de pruebas |
+| **Requests** | Cliente HTTP para llamadas a la API |
+| **Postman** | Validación manual de endpoints (Sprints 2 y 4) |
+| **API REST** | Protocolo de comunicación probado |
+
+---
+
+## 🚀 Cómo ejecutar
+
+1. Clonar el repositorio: git clone https://github.com/diegoruizinga98-sys/qa-project-Urban-Grocers-app-es.git
+2. Instalar dependencias: pip install pytest requests
+3. Ejecutar la suite: pytest create_kit_name_kit_test.py -v
+
+---
+
+## 👤 Autor
+
+**Diego Ruiz Inga** · QA Automation Engineer  
+🌐 [Portafolio](https://diegoruizinga98-sys.github.io/diego-ruiz-inga-qa/) · [LinkedIn](https://www.linkedin.com/in/diego-ruiz-inga/) · 📧 diegori466@gmail.com
