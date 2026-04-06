@@ -92,4 +92,4 @@ La fase de automatización se centró en el endpoint de creación de kits, valid
 ## 👤 Autor
 
 **Diego Ruiz Inga** · QA Automation Engineer  
-🌐 [Portafolio](https://diegoruizinga98-sys.github.io/diego-ruiz-inga-qa/) · [LinkedIn](https://www.linkedin.com/in/diego-ruiz-inga/) · 📧 diegori466@gmail.com
+🌐 [Portafolio](https://diegoruizinga98-sys.github.io/diego-ruiz-inga-qa/) · [LinkedIn](https://www.linkedin.com/in/diego-ruiz-inga/) · 📧 ruizingadiego@gmail.com
