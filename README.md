@@ -1,16 +1,18 @@
 # 🛒 Urban Grocers — API Testing & Automation
 
-**QA Automation Engineer:** Diego Ruiz Inga  
-**Bootcamp:** TripleTen QA Engineer  
+Proyecto de testing de API REST para **Urban Grocers**, una plataforma de delivery de comestibles que expone endpoints para la gestión de usuarios, kits de productos y carritos de compra.
+
+El proyecto abarca dos fases: validación manual exhaustiva con Postman para asegurar la estabilidad de los endpoints antes del go-live, y automatización con Python/Pytest para reducir el tiempo de regresión en la validación de datos de entrada.
+
 **Stack:** Python 3.11 · Pytest · Requests · Postman · API REST · Parametrized Testing
 
 ---
 
-## 📋 Descripción del proyecto
+## 📋 Contexto del proyecto
 
-Suite de pruebas para la API REST de **Urban Grocers**, cubriendo validación manual con Postman y automatización con Python/Pytest.
+**Urban Grocers** es una aplicación de delivery que permite a usuarios crear cuentas, armar kits de productos y realizar pedidos. Su API REST expone endpoints críticos que deben validarse ante distintos tipos de entrada: valores límite, datos inválidos, campos faltantes y tipos incorrectos.
 
-La automatización cubre la validación del campo name en el endpoint de creación de kits, generando un conjunto parametrizado de 9 casos que cubre fronteras, valores inválidos y casos positivos.
+La fase de automatización se centró en el endpoint de creación de kits, validando el campo `name` con un conjunto parametrizado de 9 casos de prueba que cubre análisis de valores límite, clases de equivalencia y escenarios negativos.
 
 **Resultado clave:** ⬇️ **90%+ de reducción en tiempo de ejecución** de pruebas de API vs. ejecución manual
 
