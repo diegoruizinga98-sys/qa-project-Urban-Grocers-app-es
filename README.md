@@ -1,16 +1,16 @@
 # 🛒 Urban Grocers — API Testing & Automation
 
 **QA Automation Engineer:** Diego Ruiz Inga  
-**Sprints:** 2, 4 y 8 · TripleTen QA Bootcamp  
+**Bootcamp:** TripleTen QA Engineer  
 **Stack:** Python 3.11 · Pytest · Requests · Postman · API REST · Parametrized Testing
 
 ---
 
 ## 📋 Descripción del proyecto
 
-Suite de pruebas para la API REST de **Urban Grocers**, cubriendo validación manual con Postman (Sprints 2 y 4) y automatización con Python/Pytest (Sprint 8).
+Suite de pruebas para la API REST de **Urban Grocers**, cubriendo validación manual con Postman y automatización con Python/Pytest.
 
-El Sprint 8 automatizó la validación del campo name en el endpoint de creación de kits, generando un conjunto parametrizado de 9 casos que cubre fronteras, valores inválidos y casos positivos.
+La automatización cubre la validación del campo name en el endpoint de creación de kits, generando un conjunto parametrizado de 9 casos que cubre fronteras, valores inválidos y casos positivos.
 
 **Resultado clave:** ⬇️ **90%+ de reducción en tiempo de ejecución** de pruebas de API vs. ejecución manual
 
@@ -18,7 +18,7 @@ El Sprint 8 automatizó la validación del campo name en el endpoint de creació
 
 ## 🧪 Cobertura de pruebas
 
-### Sprint 2 & 4 — Validación manual con Postman
+### 📬 Validación manual con Postman
 
 | Métrica | Valor |
 |---|---|
@@ -29,7 +29,7 @@ El Sprint 8 automatizó la validación del campo name en el endpoint de creació
 | Casos fallidos (defectos detectados) | 25 |
 | Tasa de defectos | **35%** |
 
-### Sprint 8 — Automatización Python/Pytest
+### 🤖 Automatización Python/Pytest
 
 | Métrica | Valor |
 |---|---|
@@ -74,7 +74,7 @@ El Sprint 8 automatizó la validación del campo name en el endpoint de creació
 | **Python 3.11** | Lenguaje principal |
 | **Pytest** | Framework + parametrización de pruebas |
 | **Requests** | Cliente HTTP para llamadas a la API |
-| **Postman** | Validación manual de endpoints (Sprints 2 y 4) |
+| **Postman** | Validación manual de endpoints de la API |
 | **API REST** | Protocolo de comunicación probado |
 
 ---
